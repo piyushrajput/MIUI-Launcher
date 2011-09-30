@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff181818" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0dip" android:textColor="@color/bright_text_dark_focused" android:gravity="center" android:id="@id/edit" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/widget_favorite_contacts_edit" android:layout_weight="1.0" />
+    <TextView android:textSize="17.0dip" android:textColor="@color/bright_text_dark_focused" android:gravity="center" android:id="@id/style" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/widget_favorite_contacts_style" android:layout_weight="1.0" />
+</LinearLayout>

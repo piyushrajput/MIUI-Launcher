@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.android.launcher2.LiveFolder android:orientation="vertical" android:background="@drawable/folder_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="\@layout/live_folder_header" />
+    <include layout="\@layout/folder_grid" />
+</com.android.launcher2.LiveFolder>

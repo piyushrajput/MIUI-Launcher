@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:gravity="left|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.5dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/title_edit" android:paddingLeft="20.0dip" android:paddingTop="0.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/title_edit" />
+    <include layout="\@layout/folder_title" />
+    <include layout="\@layout/folder_close" />
+</LinearLayout>

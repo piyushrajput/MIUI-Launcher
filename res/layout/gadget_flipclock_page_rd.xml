@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.android.launcher2.gadget.FlipPage android:layout_gravity="bottom|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="top|left|center" android:id="@id/left" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:layout_gravity="top|right|center" android:id="@id/right" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</com.android.launcher2.gadget.FlipPage>

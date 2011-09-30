@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.android.launcher2.CellScreen android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/background_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/editing_screen_bg" android:scaleType="fitXY" />
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/delete_btn" android:visibility="invisible" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/editing_delete_screen_btn" />
+        <ImageView android:layout_gravity="center" android:id="@id/new_btn" android:visibility="invisible" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:src="@drawable/editing_new_screen_btn" />
+    </FrameLayout>
+    <com.android.launcher2.CellLayout android:id="@id/cell_layout" android:paddingBottom="27.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.launcher2.CellBackground android:id="@id/cell_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/cell_bg" android:scaleType="fitXY" />
+    </com.android.launcher2.CellLayout>
+</com.android.launcher2.CellScreen>

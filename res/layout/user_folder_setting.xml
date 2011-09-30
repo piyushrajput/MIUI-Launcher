@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/folder_setting" android:visibility="gone" android:animationCache="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:textSize="16.0sp" android:textColor="@color/folder_setting_remane_text" android:gravity="left|center" android:id="@id/rename_edit" android:background="@drawable/rename_folder_edit_bg" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="8.0dip" android:scrollHorizontally="true" android:singleLine="true" android:maxLength="30" android:capitalize="none" android:autoText="false" />
+    <CheckBox android:textSize="17.0sp" android:textColor="@color/folder_setting_checkbox_text" android:gravity="left|center" android:id="@id/encryption" android:background="@android:drawable/preference_single_item" android:paddingRight="60.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/encryption" android:layout_weight="1.0" />
+    <RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+        <RadioButton android:id="@id/sort_by_not_defined" android:background="@android:drawable/preference_first_item" android:text="@string/sort_by_not_defined" style="\@style/RightRadioButton" />
+        <RadioButton android:id="@id/sort_by_frequency" android:background="@android:drawable/preference_item" android:text="@string/sort_by_frequency" style="\@style/RightRadioButton" />
+        <RadioButton android:id="@id/sort_by_abc" android:background="@android:drawable/preference_last_item" android:text="@string/sort_by_abc" style="\@style/RightRadioButton" />
+    </RadioGroup>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip">
+        <Button android:id="@id/confirm" android:layout_marginLeft="7.0dip" android:layout_marginRight="1.5dip" android:text="@string/confirm_btn_label" style="\@style/FolderSettingButton" />
+        <Button android:id="@id/cancel" android:layout_marginLeft="1.5dip" android:layout_marginRight="7.0dip" android:text="@string/cancel_btn_label" style="\@style/FolderSettingButton" />
+    </LinearLayout>
+</LinearLayout>

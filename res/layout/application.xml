@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.android.launcher2.ShortcutIcon android:background="@drawable/shortcut_selector" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="\@layout/icon_shadow" />
+    <include layout="\@layout/icon_icon" />
+    <include layout="\@layout/icon_title" />
+    <include layout="\@layout/icon_message" />
+</com.android.launcher2.ShortcutIcon>

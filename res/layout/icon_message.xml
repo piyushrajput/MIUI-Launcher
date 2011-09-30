@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextView android:textSize="13.0sp" android:textColor="@color/icon_message_text" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="top|center" android:id="@id/icon_msg" android:background="@android:drawable/lockscreen_preview_count" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:layout_marginTop="@dimen/icon_message_top_margin" android:singleLine="true" android:shadowColor="#ff000000" android:shadowRadius="2.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

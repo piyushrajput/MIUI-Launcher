@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="@integer/config_folder_animation_duration" android:drawable="@drawable/folder_icon_cover_06" />
+    <item android:duration="@integer/config_folder_animation_duration" android:drawable="@drawable/folder_icon_cover_05" />
+    <item android:duration="@integer/config_folder_animation_duration" android:drawable="@drawable/folder_icon_cover_04" />
+    <item android:duration="@integer/config_folder_animation_duration" android:drawable="@drawable/folder_icon_cover_03" />
+    <item android:duration="@integer/config_folder_animation_duration" android:drawable="@drawable/folder_icon_cover_02" />
+    <item android:duration="@integer/config_folder_animation_duration" android:drawable="@drawable/folder_icon_cover_01" />
+</animation-list>

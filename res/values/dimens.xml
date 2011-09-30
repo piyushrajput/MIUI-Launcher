@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="title_texture_width">120.0px</dimen>
+    <dimen name="button_bar_height">70.0dip</dimen>
+    <dimen name="slide_bar_height">20.0dip</dimen>
+    <dimen name="widget_thumbnail_size">47.0dip</dimen>
+    <dimen name="widget_box_height">99.0dip</dimen>
+    <dimen name="status_bar_height">25.0dip</dimen>
+    <dimen name="workspace_cell_width">80.0dip</dimen>
+    <dimen name="workspace_cell_height">90.0dip</dimen>
+    <dimen name="workspace_widget_cell_width">80.0dip</dimen>
+    <dimen name="workspace_widget_cell_height">100.0dip</dimen>
+    <dimen name="workspace_widget_cell_measure_width">80.0dip</dimen>
+    <dimen name="workspace_widget_cell_measure_height">74.0dip</dimen>
+    <dimen name="workspace_widget_padding_top">12.0dip</dimen>
+    <dimen name="workspace_widget_padding_bottom">24.0dip</dimen>
+    <dimen name="workspace_padding_top">25.0dip</dimen>
+    <dimen name="workspace_padding_side">8.5dip</dimen>
+    <dimen name="workspace_margin_bottom">71.34dip</dimen>
+    <dimen name="workspace_folder_height_addition">25.0dip</dimen>
+    <dimen name="workspace_folder_width_addition">12.0dip</dimen>
+    <dimen name="workspace_folder_padding_top">-15.0dip</dimen>
+    <dimen name="icon_width_margin">1.0dip</dimen>
+    <dimen name="workspace_icon_text">12.0sp</dimen>
+    <dimen name="workspace_icon_text_notification">13.0sp</dimen>
+    <dimen name="icon_message_top_margin">2.5dip</dimen>
+    <dimen name="lyric_line_extra_spacing">20.0dip</dimen>
+    <dimen name="icon_shadow_size">8.0dip</dimen>
+    <dimen name="user_folder_cell_width">73.0dip</dimen>
+    <dimen name="user_folder_cell_height">87.0dip</dimen>
+</resources>

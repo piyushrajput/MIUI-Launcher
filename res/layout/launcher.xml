@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.android.launcher2.DragLayer android:id="@id/drag_layer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher">
+    <com.android.launcher2.Background android:id="@id/drag_layer_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.launcher2.Workspace android:id="@id/workspace" android:paddingTop="@dimen/status_bar_height" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/workspace_margin_bottom" />
+    <com.android.launcher2.WorkspaceThumbnailView android:id="@id/workspace_preview" android:paddingTop="@dimen/status_bar_height" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.launcher2.WidgetThumbnailView android:layout_gravity="bottom" android:id="@id/widget_thumbnail_view" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/widget_box_height" />
+    <com.android.launcher2.HotSeats android:gravity="center" android:layout_gravity="bottom" android:id="@id/hot_seats" android:background="@drawable/hotseat_background" android:paddingLeft="@dimen/workspace_padding_side" android:paddingRight="@dimen/workspace_padding_side" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.android.launcher2.HotSeatButton style="\@style/HotseatButton" />
+        <com.android.launcher2.HotSeatButton style="\@style/HotseatButton" />
+        <com.android.launcher2.HotSeatButton style="\@style/HotseatButton" />
+        <com.android.launcher2.HotSeatButton style="\@style/HotseatButton" />
+        <com.android.launcher2.HotSeatButton style="\@style/HotseatButton" />
+        <com.android.launcher2.HotSeatButton style="\@style/HotseatButton" />
+    </com.android.launcher2.HotSeats>
+    <com.android.launcher2.DeleteZone android:layout_gravity="top" android:orientation="horizontal" android:id="@id/delete_zone" android:background="@null" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/trash" android:background="@drawable/delete_zone_selector" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/delete_zone_01" android:scaleType="center" />
+        <TextView android:layout_gravity="top|center" android:id="@id/editing_tips" android:paddingTop="13.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/editing_tips" style="\@style/WorkspaceIconTitle.notification" />
+    </com.android.launcher2.DeleteZone>
+    <com.android.launcher2.ErrorBar android:gravity="top|center" android:layout_gravity="top" android:id="@id/error" android:background="@drawable/error_background" android:paddingTop="13.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="\@style/WorkspaceIconTitle.notification" />
+</com.android.launcher2.DragLayer>

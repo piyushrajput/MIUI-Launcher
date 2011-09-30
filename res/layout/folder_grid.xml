@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GridView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="insideInset" android:id="@id/folder_content" android:animationCache="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:listSelector="@drawable/grid_selector" android:drawSelectorOnTop="false" android:cacheColorHint="#00000000" android:verticalSpacing="5.0dip" android:numColumns="4" android:layout_weight="1.0" android:drawSelectorOnNothing="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:gravity="left|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.5dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="\@layout/folder_title" />
+    <include layout="\@layout/folder_close" />
+</LinearLayout>

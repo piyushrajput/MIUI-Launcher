@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="window_background">#ff191919</color>
+    <color name="bubble_dark_background">#b2191919</color>
+    <color name="delete_color_filter">#a5ff0000</color>
+    <color name="appwidget_error_color">#ffcccccc</color>
+    <color name="preview_background">#99000000</color>
+    <color name="white_50_transparent">#80ffffff</color>
+    <color name="gadget_player_lyric_shadow_color">#ffffae00</color>
+    <color name="gadget_player_lyric_text_n">#4cffffff</color>
+    <color name="gadget_player_lyric_text_p">#4cffffff</color>
+    <item type="color" name="gadget_player_lyric_current_text_n">@android:color/white</item>
+    <item type="color" name="gadget_player_lyric_current_text_p">@android:color/white</item>
+    <item type="color" name="gadget_player_track_text_n">@android:color/white</item>
+    <item type="color" name="gadget_player_track_text_p">@android:color/white</item>
+    <item type="color" name="gadget_player_time_text_n">@android:color/white</item>
+    <item type="color" name="gadget_player_time_text_p">@android:color/white</item>
+    <color name="icon_title_text">#ffffffff</color>
+    <color name="icon_title_text_shadow">#ff000000</color>
+    <color name="folder_icon_title_text">#ffffffff</color>
+    <color name="folder_icon_title_text_shadow">#ff000000</color>
+    <color name="icon_message_text">#ffffffff</color>
+    <color name="folder_title_text">#ffffffff</color>
+    <color name="folder_title_text_shadow">#00000000</color>
+    <color name="folder_setting_remane_text">#ffcccccc</color>
+    <color name="folder_setting_checkbox_text">#ff333333</color>
+    <color name="folder_setting_list_text_pressed">#ffffffff</color>
+    <color name="folder_setting_list_text_selected">#ffffffff</color>
+    <color name="folder_setting_list_enabled">#80333333</color>
+    <color name="folder_setting_list_default">#ff333333</color>
+    <color name="icon_shadow">#60000000</color>
+</resources>
