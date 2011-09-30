@@ -1,5 +1,5 @@
 .class public Lcom/android/launcher2/Workspace;
-.super Lcom/android/launcher2/DragableScreenView;
+.super Lmobi/intuitit/android/widget/WidgetSpace;
 .source "Workspace.java"
 
 # interfaces
@@ -125,7 +125,7 @@
     const/4 v5, 0x0
 
     .line 149
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/launcher2/DragableScreenView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lmobi/intuitit/android/widget/WidgetSpace;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 96
     iput v7, p0, Lcom/android/launcher2/Workspace;->mPreviousScreen:I
@@ -1706,7 +1706,7 @@
 
     .prologue
     .line 406
-    invoke-super {p0}, Lcom/android/launcher2/DragableScreenView;->computeScroll()V
+    invoke-super {p0}, Lmobi/intuitit/android/widget/WidgetSpace;->computeScroll()V
 
     .line 407
     invoke-direct {p0}, Lcom/android/launcher2/Workspace;->updateWallpaperOffset()V
@@ -1898,7 +1898,7 @@
     if-nez v10, :cond_1
 
     .line 419
-    invoke-super {p0, p1}, Lcom/android/launcher2/DragableScreenView;->dispatchDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetSpace;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     .line 454
     :cond_0
@@ -2130,7 +2130,7 @@
     return v0
 
     :cond_0
-    invoke-super {p0, p1}, Lcom/android/launcher2/DragableScreenView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetSpace;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -2159,7 +2159,7 @@
     if-ne v2, v0, :cond_1
 
     .line 596
-    invoke-super {p0, p1}, Lcom/android/launcher2/DragableScreenView;->focusableViewAvailable(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetSpace;->focusableViewAvailable(Landroid/view/View;)V
 
     .line 606
     :cond_0
@@ -2557,6 +2557,15 @@
     const/4 v9, 0x0
 
     goto :goto_2
+.end method
+
+.method public getLauncherActivity()Landroid/app/Activity;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/launcher2/Workspace;->mLauncher:Lcom/android/launcher2/Launcher;
+
+    return-object v0
 .end method
 
 .method getOpenFolders()Ljava/util/ArrayList;
@@ -3361,7 +3370,7 @@
 
     .prologue
     .line 458
-    invoke-super {p0}, Lcom/android/launcher2/DragableScreenView;->onAttachedToWindow()V
+    invoke-super {p0}, Lmobi/intuitit/android/widget/WidgetSpace;->onAttachedToWindow()V
 
     .line 459
     iget-object v0, p0, Lcom/android/launcher2/Workspace;->mDragController:Lcom/android/launcher2/DragController;
@@ -3962,7 +3971,7 @@
     :cond_1
     :goto_1
     :pswitch_0
-    invoke-super {p0, p1}, Lcom/android/launcher2/DragableScreenView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetSpace;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -4079,7 +4088,7 @@
     .line 481
     .end local v0           #width:I
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/launcher2/DragableScreenView;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lmobi/intuitit/android/widget/WidgetSpace;->onMeasure(II)V
 
     .line 482
     return-void
@@ -4111,7 +4120,7 @@
 
     .line 580
     :cond_0
-    invoke-super {p0, p1}, Lcom/android/launcher2/DragableScreenView;->onPinchIn(Landroid/view/ScaleGestureDetector;)V
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetSpace;->onPinchIn(Landroid/view/ScaleGestureDetector;)V
 
     .line 581
     return-void
@@ -4826,7 +4835,7 @@
 
     .line 245
     :cond_5
-    invoke-super {p0, p1}, Lcom/android/launcher2/DragableScreenView;->setCurrentScreenInner(I)V
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetSpace;->setCurrentScreenInner(I)V
 
     .line 246
     return-void
@@ -5054,6 +5063,8 @@
     .line 777
     iput-object p1, p0, Lcom/android/launcher2/Workspace;->mLauncher:Lcom/android/launcher2/Launcher;
 
+    invoke-virtual {p0}, Lcom/android/launcher2/Workspace;->registerProvider()V
+
     .line 778
     return-void
 .end method
@@ -5208,7 +5219,7 @@
 
     .line 623
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lcom/android/launcher2/DragableScreenView;->snapToScreen(IIZ)V
+    invoke-super {p0, p1, p2, p3}, Lmobi/intuitit/android/widget/WidgetSpace;->snapToScreen(IIZ)V
 
     .line 624
     return-void
@@ -5284,6 +5295,17 @@
     invoke-virtual {p0}, Lcom/android/launcher2/Workspace;->invalidate()V
 
     goto :goto_0
+.end method
+
+.method public unbindWidgetScrollableViews()V
+    .locals 0
+
+    .prologue
+    .line 2016
+    invoke-virtual {p0}, Lcom/android/launcher2/Workspace;->unbindWidgetScrollable()Z
+
+    .line 2017
+    return-void
 .end method
 
 .method public updateWallpaperOffsetDuringSwitchingPreview()V

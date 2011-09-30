@@ -2821,7 +2821,7 @@
 
     .line 466
     :cond_a
-    invoke-virtual/range {p1 .. p1}, Lcom/android/launcher2/LauncherApplication;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v19
 

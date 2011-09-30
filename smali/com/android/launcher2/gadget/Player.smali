@@ -437,7 +437,7 @@
     .line 367
     iget-object v1, p0, Lcom/android/launcher2/gadget/Player;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040395
+    const v2, 0x1040399
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

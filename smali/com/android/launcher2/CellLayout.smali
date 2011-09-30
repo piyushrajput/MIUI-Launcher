@@ -1,5 +1,5 @@
 .class public Lcom/android/launcher2/CellLayout;
-.super Landroid/view/ViewGroup;
+.super Lmobi/intuitit/android/widget/WidgetCellLayout;
 .source "CellLayout.java"
 
 # interfaces
@@ -151,7 +151,7 @@
     const/4 v3, 0x0
 
     .line 114
-    invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lmobi/intuitit/android/widget/WidgetCellLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 78
     new-instance v1, Landroid/graphics/Rect;
@@ -1396,7 +1396,7 @@
 
     .line 210
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+    invoke-super {p0, p1, p2, p3}, Lmobi/intuitit/android/widget/WidgetCellLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     .line 211
     instance-of v2, p1, Lcom/android/launcher2/Folder;
@@ -1614,7 +1614,7 @@
 
     .prologue
     .line 196
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetCellLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     .line 197
     return-void
@@ -3885,7 +3885,7 @@
 
     .line 1046
     :cond_0
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetCellLayout;->removeView(Landroid/view/View;)V
 
     .line 1047
     return-void
@@ -3902,7 +3902,7 @@
     invoke-direct {p0, p1, v0}, Lcom/android/launcher2/CellLayout;->onRemoveViews(II)V
 
     .line 1063
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->removeViewAt(I)V
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetCellLayout;->removeViewAt(I)V
 
     .line 1064
     return-void
@@ -3923,7 +3923,7 @@
     invoke-direct {p0, v0, v1}, Lcom/android/launcher2/CellLayout;->onRemoveViews(II)V
 
     .line 1052
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->removeViewInLayout(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lmobi/intuitit/android/widget/WidgetCellLayout;->removeViewInLayout(Landroid/view/View;)V
 
     .line 1053
     return-void
@@ -3939,7 +3939,7 @@
     invoke-direct {p0, p1, p2}, Lcom/android/launcher2/CellLayout;->onRemoveViews(II)V
 
     .line 1069
-    invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->removeViews(II)V
+    invoke-super {p0, p1, p2}, Lmobi/intuitit/android/widget/WidgetCellLayout;->removeViews(II)V
 
     .line 1070
     return-void
@@ -3955,7 +3955,7 @@
     invoke-direct {p0, p1, p2}, Lcom/android/launcher2/CellLayout;->onRemoveViews(II)V
 
     .line 1058
-    invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->removeViewsInLayout(II)V
+    invoke-super {p0, p1, p2}, Lmobi/intuitit/android/widget/WidgetCellLayout;->removeViewsInLayout(II)V
 
     .line 1059
     return-void
@@ -3968,7 +3968,7 @@
 
     .prologue
     .line 219
-    invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->requestChildFocus(Landroid/view/View;Landroid/view/View;)V
+    invoke-super {p0, p1, p2}, Lmobi/intuitit/android/widget/WidgetCellLayout;->requestChildFocus(Landroid/view/View;Landroid/view/View;)V
 
     .line 220
     if-eqz p1, :cond_0

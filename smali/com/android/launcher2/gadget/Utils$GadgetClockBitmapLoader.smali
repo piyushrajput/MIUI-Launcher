@@ -147,7 +147,7 @@
 
     .line 96
     :try_start_4
-    throw v2
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_5
 

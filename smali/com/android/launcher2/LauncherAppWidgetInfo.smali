@@ -1,18 +1,18 @@
-.class Lcom/android/launcher2/LauncherAppWidgetInfo;
+.class public Lcom/android/launcher2/LauncherAppWidgetInfo;
 .super Lcom/android/launcher2/ItemInfo;
 .source "LauncherAppWidgetInfo.java"
 
 
 # instance fields
-.field appWidgetId:I
+.field public appWidgetId:I
 
-.field hostView:Landroid/appwidget/AppWidgetHostView;
+.field public hostView:Landroid/appwidget/AppWidgetHostView;
 
 .field packageName:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(I)V
+.method public constructor <init>(I)V
     .locals 1
     .parameter "appWidgetId"
 

@@ -590,6 +590,57 @@
     goto :goto_0
 .end method
 
+.method private appwidgetReadyBroadcast(ILandroid/content/ComponentName;)V
+    .locals 4
+    .parameter "appWidgetId"
+    .parameter "cname"
+
+    .prologue
+    .line 4290
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "mobi.intuitit.android.hpp.ACTION_READY"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 4291
+    const-string v2, "mobi.intuitit.android.hpp.EXTRA_APPWIDGET_ID"
+
+    .line 4290
+    invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    move-result-object v1
+
+    .line 4292
+    const-string v2, "appWidgetId"
+
+    .line 4291
+    invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string v2, "mobi.intuitit.android.hpp.EXTRA_API_VERSION"
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    move-result-object v1
+
+    .line 4292
+    invoke-virtual {v1, p2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    .line 4293
+    .local v0, ready:Landroid/content/Intent;
+    invoke-virtual {p0, v0}, Lcom/android/launcher2/Launcher;->sendBroadcast(Landroid/content/Intent;)V
+
+    .line 4295
+    .end local v0           #ready:Landroid/content/Intent;
+    return-void
+.end method
+
 .method private checkForLocaleChange()V
     .locals 10
 
@@ -990,6 +1041,12 @@
     move-result v12
 
     invoke-virtual/range {v6 .. v12}, Lcom/android/launcher2/Workspace;->addInCurrentScreen(Landroid/view/View;IIIIZ)V
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v14, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+
+    invoke-direct {v0, v13, v4}, Lcom/android/launcher2/Launcher;->appwidgetReadyBroadcast(ILandroid/content/ComponentName;)V
 
     goto/16 :goto_0
 .end method
@@ -3777,7 +3834,7 @@
 .end method
 
 .method public bindAppWidget(Lcom/android/launcher2/LauncherAppWidgetInfo;)V
-    .locals 12
+    .locals 13
     .parameter
 
     .prologue
@@ -3882,6 +3939,8 @@
 
     iget-object v4, v2, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
+    iget-object v12, v2, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -3983,7 +4042,13 @@
 
     invoke-static {v11, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    move-object/from16 v0, p0
+
+    iget v4, p1, Lcom/android/launcher2/LauncherAppWidgetInfo;->appWidgetId:I
+
+    invoke-direct {v0, v4, v12}, Lcom/android/launcher2/Launcher;->appwidgetReadyBroadcast(ILandroid/content/ComponentName;)V
+
+    goto/16 :goto_0
 .end method
 
 .method public bindAppsAdded(Ljava/util/ArrayList;)V
@@ -5804,6 +5869,10 @@
 
     iput-object v3, p0, Lcom/android/launcher2/Launcher;->mLockUtils:Lcom/android/internal/widget/LockPatternUtils;
 
+    iget-object v0, p0, Lcom/android/launcher2/Launcher;->mAppWidgetHost:Lcom/android/launcher2/LauncherAppWidgetHost;
+
+    invoke-virtual {v0}, Lcom/android/launcher2/LauncherAppWidgetHost;->startListening()V
+
     .line 259
     return-void
 .end method
@@ -6063,8 +6132,38 @@
 
     invoke-virtual {v0}, Lcom/android/launcher2/ApplicationsMessage;->destory()V
 
+    iget-object v1, p0, Lcom/android/launcher2/Launcher;->mWorkspace:Lcom/android/launcher2/Workspace;
+
+    invoke-virtual {v1}, Lcom/android/launcher2/Workspace;->unbindWidgetScrollableViews()V
+
+    iget-object v1, p0, Lcom/android/launcher2/Launcher;->mWorkspace:Lcom/android/launcher2/Workspace;
+
+    invoke-virtual {v1}, Lcom/android/launcher2/Workspace;->unregisterProvider()V
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/launcher2/Launcher;->mAppWidgetHost:Lcom/android/launcher2/LauncherAppWidgetHost;
+
+    invoke-virtual {v1}, Lcom/android/launcher2/LauncherAppWidgetHost;->stopListening()V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 843
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v1
+
+    move-object v0, v1
+
+    .local v0, ex:Ljava/lang/NullPointerException;
+    const-string v1, "Launcher"
+
+    const-string p0, "problem while stopping AppWidgetHost during Launcher destruction"
+
+    invoke-static {v1, p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -6959,8 +7058,6 @@
     .line 503
     iget-object v0, p0, Lcom/android/launcher2/Launcher;->mAppWidgetHost:Lcom/android/launcher2/LauncherAppWidgetHost;
 
-    invoke-virtual {v0}, Lcom/android/launcher2/LauncherAppWidgetHost;->startListening()V
-
     .line 504
     const/4 v0, 0x1
 
@@ -6987,16 +7084,7 @@
 
     invoke-virtual {v1}, Lcom/android/launcher2/DragLayer;->updateWallpaperOffset()V
 
-    .line 491
-    :try_start_0
-    iget-object v1, p0, Lcom/android/launcher2/Launcher;->mAppWidgetHost:Lcom/android/launcher2/LauncherAppWidgetHost;
-
-    invoke-virtual {v1}, Lcom/android/launcher2/LauncherAppWidgetHost;->stopListening()V
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 495
-    :goto_0
     const/4 v1, 0x2
 
     invoke-direct {p0, v1}, Lcom/android/launcher2/Launcher;->notifyGadgetStateChanged(I)V
@@ -7006,22 +7094,6 @@
 
     .line 497
     return-void
-
-    .line 492
-    :catch_0
-    move-exception v1
-
-    move-object v0, v1
-
-    .line 493
-    .local v0, ex:Ljava/lang/NullPointerException;
-    const-string v1, "Launcher"
-
-    const-string v2, "problem while stopping AppWidgetHost during Launcher destruction"
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
 .end method
 
 .method onWorkspaceDropExternalComplate()V

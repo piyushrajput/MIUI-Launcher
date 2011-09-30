@@ -70,7 +70,7 @@
     if-eqz v0, :cond_0
 
     .line 129
-    invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 132
     :cond_0
